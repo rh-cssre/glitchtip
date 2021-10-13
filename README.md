@@ -2,7 +2,7 @@
 Work In progress repository for GlitchTip Demos 
 
 
-- This is the base repo for the glitchtip helm based repo. Glitchtip is and open source error tracking application, which can be managed or shelf hosted. 
+- This is the base repo for the glitchtip demo based repo. Glitchtip is and open source error tracking application, which can be managed or shelf hosted. 
 
 Based here https://glitchtip.com/documentation
 
