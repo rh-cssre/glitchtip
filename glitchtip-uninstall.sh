@@ -9,28 +9,8 @@ GlITCHTIP_NAMESPACE=redhat-glitchtip
 
 echo "deleting web deployment"
 
-oc delete deployment/web $GlITCHTIP_NAMESPACE
+oc get all -n $GlITCHTIP_NAMESPACE
 
-# uninstalling database migration deployment 
+# delete all resources by deleting the project 
 
-echo "deleting migration deployment"
-
-oc delete deployment/migrate $GlITCHTIP_NAMESPACE
-
-sleep 3
-
-# uninstalling postgres deployment
-
-echo "deleting postgres delpoyment"
-
-oc delete deployment/postgre $GlITCHTIP_NAMESPACE
-
-
-echo "Finally deleting redis deployment"
-
-oc delete deployment/redis $GlITCHTIP_NAMESPACE
-
-echo "Finally deleting worker deployment"
-
-oc delete deployment/worker $GlITCHTIP_NAMESPACE
-
+oc delete -n $GlITCHTIP_NAMESPACE
