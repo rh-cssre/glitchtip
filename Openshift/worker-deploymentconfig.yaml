@@ -1,0 +1,57 @@
+apiVersion: v1
+kind: DeploymentConfig
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: worker
+  name: worker
+spec:
+  replicas: 1
+  selector:
+    io.kompose.service: worker
+  strategy:
+    resources: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: worker
+    spec:
+      containers:
+        - args:
+            - celery
+            - -A
+            - glitchtip
+            - worker
+            - -B
+            - -l
+            - INFO
+          env:
+            - name: DATABASE_URL
+              value: postgres://postgres:postgres@postgres:5432/postgres
+            - name: PORT
+              value: "8000"
+            - name: SECRET_KEY
+              value: postgres
+          image: ' '
+          name: worker
+          resources: {}
+      restartPolicy: Always
+  test: false
+  triggers:
+    - type: ConfigChange
+    - imageChangeParams:
+        automatic: true
+        containerNames:
+          - worker
+        from:
+          kind: ImageStreamTag
+          name: worker:latest
+      type: ImageChange
+status:
+  availableReplicas: 0
+  latestVersion: 0
+  observedGeneration: 0
+  replicas: 0
+  unavailableReplicas: 0
+  updatedReplicas: 0
