@@ -19,6 +19,8 @@ Based here https://glitchtip.com/documentation
 
 ### Video Demo
 
-*TBD*
+- install instructiion from asciicinema
+
+[![asciicast](https://asciinema.org/a/pUWA9FVVlS2cXUV5V9YWVqB6e.svg)](https://asciinema.org/a/pUWA9FVVlS2cXUV5V9YWVqB6e)
 
 *Note:* The default values assume a externally managed PostgresSQL database and external Redis. Redis in GlitchTip is ephemeral.

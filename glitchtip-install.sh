@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
@@ -32,5 +32,7 @@ oc adm policy add-scc-to-user anyuid -z glitchtip -n redhat-glitchtip
 sleep 5
 
 echo "applying manifests to namespace"
+
+echo "deploying Glitchtip to RHMI staging cluster"
 
 oc apply -f ${DIR}/K8s-manifests/
