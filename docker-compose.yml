@@ -1,0 +1,36 @@
+version: "3.4"
+x-environment: &default-environment
+  DATABASE_URL: postgres://postgres:postgres@postgres:5432/postgres
+  SECRET_KEY: postgres
+  PORT: 8000
+x-depends_on: &default-depends_on
+  - postgres
+  - redis
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_PASSWORD: "postgres"
+    restart: always
+  redis:
+    image: redis
+    restart: always
+  web:
+    image: glitchtip/glitchtip
+    depends_on: *default-depends_on
+    ports:
+      - "8000:8000"
+    environment: *default-environment
+    restart: always
+  worker:
+    image: glitchtip/glitchtip
+    command: celery -A glitchtip worker -B -l INFO
+    depends_on: *default-depends_on
+    environment: *default-environment
+    restart: always
+  migrate:
+    image: glitchtip/glitchtip
+    depends_on: *default-depends_on
+    command: "./manage.py migrate"
+    environment: *default-environment
