@@ -16,9 +16,21 @@ command -v helm >/dev/null 2>&1 || { echo >&2 "Helm is required but not installe
 
 # Create the appropriate Namespace
 
+echo "Creating namespace for glitchtip"
 oc create ns $GlITCHTIP_NAMESPACE
+
+echo "changing to active namespace"
+
+oc project $GlITCHTIP_NAMESPACE
 
 # Create the SCC for the namespace
 
+echo "Creating SCC account for namespace."
+
+oc adm policy add-scc-to-user anyuid -z glitchtip -n redhat-glitchtip
+
+sleep 5
+
+echo "applying manifests to namespace"
 
 oc apply -f ${DIR}/K8s-manifests/
