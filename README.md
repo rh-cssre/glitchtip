@@ -19,7 +19,7 @@ Based here https://glitchtip.com/documentation
 
 ### Video Demo
 
-- install instructiion from asciicinema
+- Review install instructions from asciicinema below.
 
 [![asciicast](https://asciinema.org/a/pUWA9FVVlS2cXUV5V9YWVqB6e.svg)](https://asciinema.org/a/pUWA9FVVlS2cXUV5V9YWVqB6e)
 
