@@ -21,4 +21,4 @@ Based here https://glitchtip.com/documentation
 
 *TBD*
 
-*Note:* The default values assume a externally managed PostgresSQL database and a chart managed Redis. Redis in GlitchTip is ephemeral.
+*Note:* The default values assume a externally managed PostgresSQL database and external Redis. Redis in GlitchTip is ephemeral.
