@@ -1,0 +1,9 @@
+---
+apiVersion: v1
+kind: Template
+metadata:
+  name: postgres-backup-s3-job-template
+  annotations:
+    description: 'Job for backing up Postgres data to Amazon S3'
+objects:
+  
