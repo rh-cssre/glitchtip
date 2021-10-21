@@ -1,0 +1,7 @@
+---
+apiVersion: v1
+kind: Template
+metadata:
+  name: postgres-backup-s3-cronjob-template
+  annotations:
+    description: 'Cron job for backing up Posgres data from glitchtip to Amazon S3'
