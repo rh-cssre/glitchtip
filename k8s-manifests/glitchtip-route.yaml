@@ -1,0 +1,18 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  labels:
+    io.kompose.service: web
+  name: glitchtip-demo
+  namespace: redhat-glitchtip
+spec:
+  host: glitchtip-demo-redhat-glitchtip.apps.rhmi2-cssre2.x9f2.p1.openshiftapps.com
+  port:
+    targetPort: "8000"
+  to:
+    kind: Service
+    name: web
+    weight: 100
+  wildcardPolicy: None
