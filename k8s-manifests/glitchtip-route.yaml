@@ -8,7 +8,7 @@ metadata:
   name: glitchtip-demo
   namespace: redhat-glitchtip
 spec:
-  host: glitchtip-demo-redhat-glitchtip.apps.rhmi2-cssre2.x9f2.p1.openshiftapps.com
+  host: 
   port:
     targetPort: "8000"
   to:
