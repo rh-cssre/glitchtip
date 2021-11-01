@@ -1,7 +1,5 @@
 # glitchtip
 Work In progress repository for GlitchTip Demos 
-<<<<<<< HEAD
-=======
 
 
 - This is the base repo for the glitchtip demo based repo. Glitchtip is and open source error tracking application, which can be managed or shelf hosted. 
@@ -19,6 +17,12 @@ Based here https://glitchtip.com/documentation
 - Kompose: [kompose](https://kompose.io/getting-started/)
 
 
+
+### GlitchTip Architecture Overview
+
+![Glitchtip] (glitchtiparchitecture.png)
+
+
 ### Video Demo
 
 - Review install instructions from asciicinema below.
@@ -26,4 +30,4 @@ Based here https://glitchtip.com/documentation
 [![asciicast](https://asciinema.org/a/pUWA9FVVlS2cXUV5V9YWVqB6e.svg)](https://asciinema.org/a/pUWA9FVVlS2cXUV5V9YWVqB6e)
 
 *Note:* The default values assume a externally managed PostgresSQL database and external Redis. Redis in GlitchTip is ephemeral.
->>>>>>> CSSRE-1573_Demo
+
