@@ -31,6 +31,13 @@ spec:
               value: "8000"
             - name: SECRET_KEY
               value: postgres
+            - name: I_PAID_FOR_GLITCHTIP
+              value: 'True'
+            - name: ENABLE_OPEN_USER_REGISTRATION
+              value: 'True'
+            - name: GLITCHTIP_DOMAIN
+              value: >-
+                https://glitchtip-demo-redhat-glitchtip.apps.rhmi2-cssre2.x9f2.p1.openshiftapps.com
           image: glitchtip/glitchtip
           name: web
           ports:
