@@ -4,6 +4,11 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 GlITCHTIP_NAMESPACE=redhat-glitchtip
 
+EMAIL=mfreer@redhat.com
+
+PASSWORD="Tolkein_34"
+PASSWORD1="Tolkein_34"
+
 # Check if OpenShift cli tool is installed
 command -v oc >/dev/null 2>&1 || { echo >&2 "OpenShift CLI is required but not installed.  Aborting."; exit 1; } 
 
@@ -36,3 +41,12 @@ echo "applying manifests to namespace"
 echo "deploying Glitchtip to RHMI staging cluster"
 
 oc apply -f ${DIR}/K8s-manifests/
+
+
+sleep 10
+
+
+echo " Creating admin user for glitchttip"
+oc oc -n redhat-glitchtip exec -it python manage.py createsuperadmin $EMAIL, $PASSWORD, $PASSWORD1
+
+
