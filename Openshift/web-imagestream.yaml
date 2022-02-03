@@ -8,5 +8,15 @@ metadata:
 spec:
   lookupPolicy:
     local: false
+  tags:
+    - annotations: null
+      from:
+        kind: DockerImage
+        name: glitchtip/glitchtip:latest
+      generation: null
+      importPolicy: {}
+      name: latest
+      referencePolicy:
+        type: ""
 status:
   dockerImageRepository: ""

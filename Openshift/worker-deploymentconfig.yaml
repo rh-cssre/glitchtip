@@ -29,10 +29,28 @@ spec:
           env:
             - name: DATABASE_URL
               value: postgres://postgres:postgres@postgres:5432/postgres
+            - name: DEFAULT_FROM_EMAIL
+              value: no-reply@devshift.net
+            - name: EMAIL_URL
+              value: smtp://apikey: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@smtp.sendgrid.net:587
+            - name: ENABLE_OPEN_USER_REGISTRATION
+              value: "True"
+            - name: GLITCHTIP_DOMAIN
+              value: https://glitchtip.stage.devshift.net
             - name: PORT
               value: "8000"
             - name: SECRET_KEY
               value: postgres
+            - name: GLITCHTIP_MAX_EVENT_LIFE_DAYS # As this is the retention period for teams in sentry 
+              value: 30
+            - name: I_PAID_FOR_GLITCHTIP
+              value: "True"
+            - name: ACCOUNT_LOGOUT_ON_GET
+              value: "True"
+            - name: LOGIN_REDIRECT_URL
+              value: "home"
+            - name: SITE_ID
+              value: 1
           image: ' '
           name: worker
           resources: {}

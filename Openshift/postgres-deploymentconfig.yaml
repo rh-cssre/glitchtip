@@ -11,6 +11,7 @@ spec:
     io.kompose.service: postgres
   strategy:
     resources: {}
+    type: Recreate
   template:
     metadata:
       creationTimestamp: null
@@ -19,12 +20,19 @@ spec:
     spec:
       containers:
         - env:
-            - name: POSTGRES_PASSWORD
-              value: postgres
+            - name: POSTGRES_HOST_AUTH_METHOD
+              value: trust
           image: ' '
           name: postgres
           resources: {}
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: postgres-claim0
       restartPolicy: Always
+      volumes:
+        - name: postgres-claim0
+          persistentVolumeClaim:
+            claimName: postgres-claim0
   test: false
   triggers:
     - type: ConfigChange
@@ -34,7 +42,7 @@ spec:
           - postgres
         from:
           kind: ImageStreamTag
-          name: postgres:13
+          name: postgres:12
       type: ImageChange
 status:
   availableReplicas: 0

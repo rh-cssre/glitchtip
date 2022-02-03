@@ -38,6 +38,10 @@ spec:
             - name: GLITCHTIP_DOMAIN
               value: >-
                 https://glitchtip-demo-redhat-glitchtip.apps.rhmi2-cssre2.x9f2.p1.openshiftapps.com
+            - name: DEFAULT_FROM_EMAIL
+              value: no-reply@devshift.net
+            - name: EMAIL_URL
+              value: smtp+tls://smtp-user:smtp-password@email-smtp.eu-west-1.amazonaws.com:587
           image: glitchtip/glitchtip
           name: web
           ports:

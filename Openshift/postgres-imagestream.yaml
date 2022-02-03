@@ -8,5 +8,15 @@ metadata:
 spec:
   lookupPolicy:
     local: false
+  tags:
+    - annotations: null
+      from:
+        kind: DockerImage
+        name: postgres:12
+      generation: null
+      importPolicy: {}
+      name: "12"
+      referencePolicy:
+        type: ""
 status:
   dockerImageRepository: ""
