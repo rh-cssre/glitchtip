@@ -32,7 +32,7 @@ spec:
             - name: DEFAULT_FROM_EMAIL
               value: no-reply@devshift.net
             - name: EMAIL_URL
-              value: smtp://apikey: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@smtp.sendgrid.net:587
+              value: smtp+tls://smtp-user:smtp-password@email-smtp.eu-west-1.amazonaws.com:587
             - name: ENABLE_OPEN_USER_REGISTRATION
               value: "True"
             - name: GLITCHTIP_DOMAIN
