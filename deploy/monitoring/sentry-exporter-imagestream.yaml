@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ImageStream
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: sentry-exporter
+  name: sentry-exporter
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+    - annotations: null
+      from:
+        kind: DockerImage
+        name: sentry-prometheus-exporter:latest
+      generation: null
+      importPolicy: {}
+      name: latest
+      referencePolicy:
+        type: ""
+status:
+  dockerImageRepository: ""
