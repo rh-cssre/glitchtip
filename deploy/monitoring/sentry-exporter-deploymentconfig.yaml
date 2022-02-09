@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: DeploymentConfig
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: sentry-exporter
+  name: sentry-exporter
+spec:
+  replicas: 1
+  selector:
+    io.kompose.service: sentry-exporter
+  strategy:
+    resources: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: sentry-exporter
+    spec:
+      containers:
+        - image: ' '
+          name: sentry-prometheus-exporter
+          ports:
+            - containerPort: 9790
+          resources: {}
+      restartPolicy: Always
+  test: false
+  triggers:
+    - type: ConfigChange
+    - imageChangeParams:
+        automatic: true
+        containerNames:
+          - sentry-prometheus-exporter
+        from:
+          kind: ImageStreamTag
+          name: sentry-exporter:latest
+      type: ImageChange
+status:
+  availableReplicas: 0
+  latestVersion: 0
+  observedGeneration: 0
+  replicas: 0
+  unavailableReplicas: 0
+  updatedReplicas: 0

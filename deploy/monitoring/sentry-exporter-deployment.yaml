@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.1 (HEAD)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: sentry-exporter
+  name: sentry-exporter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: sentry-exporter
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.26.1 (HEAD)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: sentry-exporter
+    spec:
+      containers:
+        - env:
+            - name: SENTRY_AUTH_TOKEN
+              valueFrom:
+                configMapKeyRef:
+                  key: SENTRY_AUTH_TOKEN
+                  name: env
+            - name: SENTRY_BASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: SENTRY_BASE_URL
+                  name: env
+            - name: SENTRY_EXPORTER_ORG
+              valueFrom:
+                configMapKeyRef:
+                  key: SENTRY_EXPORTER_ORG
+                  name: env
+          image: sentry-prometheus-exporter:latest
+          name: sentry-prometheus-exporter
+          ports:
+            - containerPort: 9790
+          resources: {}
+      restartPolicy: Always
+status: {}
