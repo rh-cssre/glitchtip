@@ -40,7 +40,7 @@ spec:
                 configMapKeyRef:
                   key: SENTRY_EXPORTER_ORG
                   name: env
-          image: sentry-prometheus-exporter:latest
+          image: italux/sentry-prometheus-exporter:latest
           name: sentry-prometheus-exporter
           ports:
             - containerPort: 9790

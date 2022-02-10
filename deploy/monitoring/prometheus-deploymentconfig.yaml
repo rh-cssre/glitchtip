@@ -19,13 +19,13 @@ spec:
         io.kompose.service: prometheus
     spec:
       containers:
-        - image: ' '
-          name: prometheus
+        - image: 'prom/prometheus'
+          name: prom/prometheus
           ports:
             - containerPort: 9090
           resources: {}
           volumeMounts:
-            - mountPath: /etc/prometheus/prometheus.yml
+            - mountPath: /prometheus
               name: prometheus-claim0
       restartPolicy: Always
       volumes:
