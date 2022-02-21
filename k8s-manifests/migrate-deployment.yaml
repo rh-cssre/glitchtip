@@ -29,9 +29,9 @@ spec:
             - migrate
           env:
             - name: DATABASE_URL
-              value: postgres://postgres:postgres@postgres:5432/postgres
+              value: postgres://postgres:postgres@postgres:5432/postgres # fill me here
             - name: PORT
-              value: "8000"
+              value: "5432"
             - name: SECRET_KEY
               value: postgres
           image: glitchtip/glitchtip
