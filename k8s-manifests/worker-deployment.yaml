@@ -4,7 +4,6 @@ metadata:
   annotations:
     kompose.cmd: kompose convert -f docker-compose.sample.yaml --controller deployment --out k8s-manifests
     kompose.version: 1.22.0 (HEAD)
-  creationTimestamp: null
   labels:
     io.kompose.service: worker
   name: worker
@@ -19,7 +18,6 @@ spec:
       annotations:
         kompose.cmd: kompose convert -f docker-compose.sample.yaml --controller deployment --out k8s-manifests
         kompose.version: 1.22.0 (HEAD)
-      creationTimestamp: null
       labels:
         io.kompose.service: worker
     spec:
@@ -41,6 +39,12 @@ spec:
               value: postgres
           image: glitchtip/glitchtip
           name: worker
-          resources: {}
+          resources: 
+            requests:
+              cpu: 100m
+              memory: 500M
+            limits:
+              memory: 1G
+              cpu: 200m
       restartPolicy: Always
 status: {}
