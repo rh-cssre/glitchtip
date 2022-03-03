@@ -4,7 +4,6 @@ metadata:
   annotations:
     kompose.cmd: kompose convert -f docker-compose.sample.yaml --controller deployment --out k8s-manifests
     kompose.version: 1.22.0 (HEAD)
-  creationTimestamp: null
   labels:
     io.kompose.service: redis
   name: redis
@@ -19,13 +18,20 @@ spec:
       annotations:
         kompose.cmd: kompose convert -f docker-compose.sample.yaml --controller deployment --out k8s-manifests
         kompose.version: 1.22.0 (HEAD)
-      creationTimestamp: null
       labels:
         io.kompose.service: redis
     spec:
       containers:
         - image: redis
           name: redis
-          resources: {}
+          resources: 
+            requests:
+              cpu: 100m
+              memory: 50M
+            limits:
+              memory: 200M
+              cpu: "1"
+
+          
       restartPolicy: Always
 status: {}

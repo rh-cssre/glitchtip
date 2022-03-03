@@ -4,7 +4,6 @@ metadata:
   annotations:
     kompose.cmd: kompose convert -f docker-compose.sample.yaml --controller deployment --out k8s-manifests
     kompose.version: 1.22.0 (HEAD)
-  creationTimestamp: null
   labels:
     io.kompose.service: migrate
   name: migrate
@@ -19,7 +18,6 @@ spec:
       annotations:
         kompose.cmd: kompose convert -f docker-compose.sample.yaml --controller deployment --out k8s-manifests
         kompose.version: 1.22.0 (HEAD)
-      creationTimestamp: null
       labels:
         io.kompose.service: migrate
     spec:
@@ -36,6 +34,12 @@ spec:
               value: postgres
           image: glitchtip/glitchtip
           name: migrate
-          resources: {}
+          resources: 
+            requests:
+              cpu: 1m
+              memory: 100Mi
+            limits:
+              memory: 200Mi
+              cpu: 100m
       restartPolicy: Always
 status: {}

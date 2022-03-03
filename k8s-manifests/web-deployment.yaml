@@ -4,12 +4,11 @@ metadata:
   annotations:
     kompose.cmd: kompose convert -f docker-compose.sample.yaml --controller deployment --out k8s-manifests
     kompose.version: 1.22.0 (HEAD)
-  creationTimestamp: null
   labels:
     io.kompose.service: web
   name: web
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       io.kompose.service: web
@@ -19,7 +18,6 @@ spec:
       annotations:
         kompose.cmd: kompose convert -f docker-compose.sample.yaml --controller deployment --out k8s-manifests
         kompose.version: 1.22.0 (HEAD)
-      creationTimestamp: null
       labels:
         io.kompose.service: web
     spec:
@@ -46,6 +44,12 @@ spec:
           name: web
           ports:
             - containerPort: 8000
-          resources: {}
+          resources: 
+            requests:
+              cpu: "3"
+              memory: 800M
+            limits:
+              memory: 2G
+              cpu: "5"
       restartPolicy: Always
 status: {}
