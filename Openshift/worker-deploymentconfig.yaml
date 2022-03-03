@@ -1,7 +1,6 @@
 apiVersion: v1
 kind: DeploymentConfig
 metadata:
-  creationTimestamp: null
   labels:
     io.kompose.service: worker
   name: worker
@@ -13,7 +12,6 @@ spec:
     resources: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         io.kompose.service: worker
     spec:
@@ -42,7 +40,7 @@ spec:
             - name: SECRET_KEY
               value: postgres
             - name: GLITCHTIP_MAX_EVENT_LIFE_DAYS # As this is the retention period for teams in sentry 
-              value: 30
+              value: "30"
             - name: I_PAID_FOR_GLITCHTIP
               value: "True"
             - name: ACCOUNT_LOGOUT_ON_GET
@@ -50,10 +48,16 @@ spec:
             - name: LOGIN_REDIRECT_URL
               value: "home"
             - name: SITE_ID
-              value: 1
+              value: "1"
           image: ' '
           name: worker
-          resources: {}
+          resources: 
+            requests:
+              cpu: 100m
+              memory: 500M
+            limits:
+              memory: 1G
+              cpu: 200m
       restartPolicy: Always
   test: false
   triggers:
