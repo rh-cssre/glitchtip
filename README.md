@@ -29,7 +29,7 @@ Based here https://glitchtip.com/documentation
 
 ### Optional environment variables:
 
-- `I_PAID_FOR_GLITCHTIP` Donate, set this to "true", and some neat things will happen. This won't enable extra features but it will enable our team to continue building GlitchTip. We pay programmers, designers, illustrators, and free tier hosting on app.glitchtip.com without venture capital. - We ask that all self-host users pitch in with a suggested donation of $5 per month per user. 
+- `I_PAID_FOR_GLITCHTIP` Donate, set this to "true", and some neat things will happen. 
 - `GLITCHTIP_MAX_EVENT_LIFE_DAYS` (Default 90) Events and associated data older than this will be deleted from the database
 - `REDIS_URL` Set redis host explicitly. Example: `redis://:password@host:port/database`. You may also set them separately with `REDIS_HOST`, `REDIS_PORT`, `REDIS_DATABASE`, and `REDIS_PASSWORD`.
 - DATABASE_URL Set PostgreSQL connect string. PostgreSQL 11 and above are supported.
