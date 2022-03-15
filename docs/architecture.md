@@ -10,6 +10,5 @@
 
 ## Platform Architecture and Transparency
 
-- User data is stored in Postgres AWS RDS service for bothi stating and production environments.
-- This includes error data as sent by the Sentry SDK. Glichtip data isconfigured to be purged every 30 days 
-- 
+- User data is stored in Postgres AWS RDS service for both `stating` and `production` environments.
+- This includes error data as sent by the Sentry SDK. Glichtip data is configured to be purged every 30 days.
