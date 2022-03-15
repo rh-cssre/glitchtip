@@ -6,7 +6,7 @@
 
 ![Glitchtip](https://github.com/rh-cssre/glitchtip/blob/update_architecture/images/glitchtiparchitecture.png)
 
-**Note:** This Diagram will need to be update once onbaording is completed.
+**Note:** This Diagram will need to be updated once onbaording is completed.
 
 ## Platform Architecture and Transparency
 
