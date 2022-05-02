@@ -20,6 +20,7 @@ Default Backup Strategies are defined link:https://gitlab.cee.redhat.com/service
 It could be anytime from 0-35 days: link:https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance#backup_retention_period[Docs]. 
 
 ### Staging Env.
-Default Backup retension period on stage is 7 Days.
+Default Backup retention period on stage is 7 Days.
+Since Staging DB is hosted on *us-east-1* region, The Backup window is *03:00–11:00* UTC
 
 link:https://gitlab.cee.redhat.com/service/app-interface/-/blob/master/data/services/glitchtip/namespaces/glitchtip-stage.yml#L26[Staging RDS Configrations] can be found here.
