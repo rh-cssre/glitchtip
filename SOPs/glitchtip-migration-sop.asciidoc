@@ -9,8 +9,8 @@ All the DB migrations are written in link:https://github.com/rh-cssre/glitchtip-
 Cluster DB Configurations: link:https://gitlab.cee.redhat.com/service/app-interface/-/blob/master/resources/terraform/resources/app-sre-stage/rds-3-pg13.yml[AWS DB Config]
 
 
-We run migrations via *Init Container* of Glitchtip Web App. +
-Refer link:https://lucid.app/lucidchart/01687578-66d6-4b8d-bcf1-e89891a754e7/edit?invitationId=inv_9961312b-9e2e-4592-af49-c3c5b1481b46[Arc. Diagram]
+We run migrations via *Init Container* of Glitchtip Web App. So, technically when Glitchtip Web Deployment deploys, it checks all new migrations into the DB. +
+Refer link:https://lucid.app/lucidchart/01687578-66d6-4b8d-bcf1-e89891a754e7/edit?invitationId=inv_9961312b-9e2e-4592-af49-c3c5b1481b46[Architecture Diagram]
 
 
 ## Backup Strategies
@@ -20,4 +20,6 @@ Default Backup Strategies are defined link:https://gitlab.cee.redhat.com/service
 It could be anytime from 0-35 days: link:https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance#backup_retention_period[Docs]. 
 
 ### Staging Env.
+Default Backup retension period on stage is 7 Days.
+
 link:https://gitlab.cee.redhat.com/service/app-interface/-/blob/master/data/services/glitchtip/namespaces/glitchtip-stage.yml#L26[Staging RDS Configrations] can be found here.
