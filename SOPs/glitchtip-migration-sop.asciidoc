@@ -1,0 +1,29 @@
+## Glitchtip DB Migration SOP
+
+In this Doc, We documented all DB migration statergies of Glitchtip
+
+All the DB migrations are written in link:https://github.com/rh-cssre/glitchtip-backend[GT Backend] Repo.
+
+### Cluster DB Migration
+
+Cluster DB Configurations: link:https://gitlab.cee.redhat.com/service/app-interface/-/blob/master/resources/terraform/resources/app-sre-stage/rds-3-pg13.yml[AWS DB Config]
+
+
+We run migrations via *Init Container* of Glitchtip Web App. +
+Refer link:https://lucid.app/lucidchart/01687578-66d6-4b8d-bcf1-e89891a754e7/edit?invitationId=inv_9961312b-9e2e-4592-af49-c3c5b1481b46[Arc. Diagram]
+
+
+### Local Cluster DB Migration:
+
+DB Schemas in Local DB's can be made by running the migration commands: + 
+`python3 manage.py migrate`
+
+
+## Backup Strategies
+
+Default Backup Statergies are defined link:https://gitlab.cee.redhat.com/service/app-interface/-/blob/master/resources/terraform/resources/app-sre-stage/integration/rds-1.yml[here] 
+
+It could be anytime from 0-35 days: link:https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance#backup_retention_period[Docs]. 
+
+### Staging Env.
+link:https://gitlab.cee.redhat.com/service/app-interface/-/blob/master/data/services/glitchtip/namespaces/glitchtip-stage.yml#L26[Staging RDS Configrations] can be found here.
