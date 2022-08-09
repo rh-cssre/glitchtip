@@ -6,7 +6,7 @@ the productions environment is in progress.
 
 ## The Architecture
 
-Glitchtip's Front-end is written in Angular Js and Node JS, along with some typescript and It's backend is written and python Django, It uses PostgreSQL as its backend database and Redis for a caching layer.
+Glitchtip's Front-end is written in Angular Js and Node JS, along with some typescript and It's backend is written in python Django, It uses PostgreSQL as its backend database and Redis for a caching layer.
 
 ## Features
 
