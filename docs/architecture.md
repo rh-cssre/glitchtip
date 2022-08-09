@@ -30,7 +30,7 @@ Glitchtip's Front-end is written in Angular Js and Node JS, along with some type
 - This is a diagram provides a high level overview of the Glichtip Architecture both from a Openshift / Kubernetes perspective and external entities it interacts with such as AWS RDS Potgres and AWS Elacticache. 
 
 
-![Glitchtip](https://github.com/rh-cssre/glitchtip/blob/update_architecture/images/Glitchtip-architecture.png)
+![Glitchtip](https://github.com/rh-cssre/glitchtip/blob/update_architecture/images/glitchtiparchitecture.png)
 
 **Note:** This Diagram will need to be updated once onbaording is completed.
 
@@ -41,7 +41,7 @@ Glitchtip's Front-end is written in Angular Js and Node JS, along with some type
 
 ## Resource consumption
 
-- The staging instance of Glitchtip consumes about 96MiB of memory and 0.01 CPU for the `beat` pod component,  when nothing is happening. 
+- The staging instance of Glitchtip consumes about 96MiB of memory and 0.01 CPU for the `beat` pod component,  when nothing is happening.
 
     - The database instance that is currently used in stage is db.t3.micro. Its CPU utilization is about
     5% on average and 30% during the load test. The production instance is db.t3.small.
