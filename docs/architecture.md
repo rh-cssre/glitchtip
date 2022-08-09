@@ -30,7 +30,7 @@ Glitchtip's Front-end is written in Angular Js and Node JS, along with some type
 - This is a diagram provides a high level overview of the Glichtip Architecture both from a Openshift / Kubernetes perspective and external entities it interacts with such as AWS RDS Potgres and AWS Elacticache. 
 
 
-![Glitchtip](https://github.com/rh-cssre/glitchtip/blob/main/images/Glitchtip-architecture.png)
+![Glitchtip](https://github.com/rh-cssre/glitchtip/blob/main/images/Glitchtiparchitecture1.png)
 
 **Note:** This Diagram will need to be updated once onboarding is completed.
 
