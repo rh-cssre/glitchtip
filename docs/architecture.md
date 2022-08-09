@@ -45,5 +45,5 @@ Glitchtip's Front-end is written in Angular Js and Node JS, along with some type
 
     - The database instance that is currently used in stage is db.t3.micro. Its CPU utilization is about
     5% on average and 30% during the load test. The production instance is db.t3.small.
-    The S3 bucket space consumed is almost none at the moment but will grow as the WebRCA service will start being used. The
+    The S3 bucket space consumed is almost none at the moment but will grow as the Glitchtip service will start being used. The
     space is occupied only by the attachments uploaded by the users. Therefore we do not expect a dramatic change.
