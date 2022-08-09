@@ -39,7 +39,7 @@ Based here https://glitchtip.com/documentation
 
 ### GlitchTip Architecture Overview
 
-![Glitchtip](https://github.com/rh-cssre/glitchtip/blob/update_architecture/images/glitchtiparchitecture.png)
+![Glitchtip](https://github.com/rh-cssre/glitchtip/blob/main/images/Glitchtiparchitecture1.png)
 
 
 ### Video Demo
