@@ -47,3 +47,31 @@ Glitchtip's Front-end is written in Angular Js and Node JS, along with some type
     5% on average and 30% during the load test. The production instance is db.t3.small.
     The S3 bucket space consumed is almost none at the moment but will grow as the Glitchtip service will start being used. The
     space is occupied only by the attachments uploaded by the users. Therefore we do not expect a dramatic change.
+
+### Resource consumption for glitchtip components
+#### Resource consumption for beat deployment
+Resource Usage for beat deployment for 30 days time period
+##### CPU cores Usage
+![glitchtip-beat-cpu-cores-usage](../images/glitchtip-beat-cpu-cores-usage.png)
+
+##### Memory Usage
+![glitchtip-beat--memory](../images/glitchtip-beat-memory.png)
+
+#### Resource consumption for worker deployment
+Resource Usage for worker deployment for 30 days time period
+##### CPU cores Usage
+![glitchtip-worker-cpu-cores-usage](../images/glitchtip-worker-cpu-cores.png)
+
+##### Memory Usage
+![glitchtip-worker-memory](../images/glitchtip-worker-memory.png)
+
+#### Resource consumption for web deployment
+Resource Usage for web deployment for 30 days time period
+##### CPU cores Usage
+![glitchtip-web-cpu-cores-usage](../images/glitchtip-web-cpu-cores.png)
+
+##### Memory Usage
+![glitchtip-web-memory](../images/glitchtip-web-memory.png)
+
+## Load Testing
+The load testing on stage environment is available at: [Load Testing Document](https://gitlab.cee.redhat.com/service/app-interface/docs/glitchtip/sops/load-testing.md)
