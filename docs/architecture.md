@@ -74,4 +74,4 @@ Resource Usage for web deployment for 30 days time period
 ![glitchtip-web-memory](../images/glitchtip-web-memory.png)
 
 ## Load Testing
-The load testing on stage environment is available at: [Load Testing Document](https://gitlab.cee.redhat.com/service/app-interface/docs/glitchtip/sops/load-testing.md)
+The load testing on stage environment is available at: [Load Testing Document](https://gitlab.cee.redhat.com/service/app-interface/-/blob/ecf2ce5dae40735f8cd78e729432d47ac1d17e75/docs/glitchtip/sops/load-testing.md)
