@@ -18,7 +18,7 @@ Glitchtip's front-end is written in Angular js and Node JS, along with some type
  * [Integrations](https://glitchtip.com/documentation/integrations)
 
 
-## MAIN Components:
+## Main Components:
 
 1. The `Beat` Deployment - Is responsible for the initial database migration and celery scheduling to the worker nodes.
 
