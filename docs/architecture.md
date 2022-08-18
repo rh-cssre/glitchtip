@@ -1,7 +1,7 @@
 ## Glitchtip architecture
 
 
-Glitchtip is An Open source Error tracking software and a upstream fork of Sentry. The staging environment is available via https://glitchtip.stage.devshift.net and
+Glitchtip is An Open source Error tracking software which aims to be API-compatible with Sentry. The staging environment is available via https://glitchtip.stage.devshift.net and
 the production environment is in progress.
 
 ## The Architecture
@@ -36,7 +36,7 @@ Glitchtip's front-end is written in Angular js and Node JS, along with some type
 
 ## Platform Architecture and Transparency
 
-- User data is stored in Postgres AWS RDS service for both `stating` and `production` environments.
+- User data is stored in Postgres AWS RDS service for both `staging` and `production` environments.
 - This includes error data as sent by the Sentry SDK. Glitchtip data is configured to be purged every 30 days.
 
 ## Resource consumption
